@@ -38,12 +38,13 @@ const Dropdown = ({ label, options, multiSelect }: DropdownProps) => {
         className='target'
         type='text'
         value={selected.map(item => item.label).join(', ')}
+        readOnly
       />
       {showDropdown && (
         <div className='dropdown'>
           {options.map(option => (
             <div
-              className='option'
+              className={`option ${selected.includes(option) ? 'selected' : ''}`}
               key={option.value}
               onClick={() => handleSelection(option)}>
               {option.label}

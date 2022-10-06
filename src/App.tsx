@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import './App.css';
 import Dropdown, { Selection } from './components/Dropdown/Dropdown';
+
+import './App.css';
 
 const exampleData: Selection[] = [
   { value: '1', label: 'One' },
@@ -10,8 +10,6 @@ const exampleData: Selection[] = [
 ];
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className='App'>
       <Dropdown label='Example Dropdown' options={exampleData} multiSelect></Dropdown>
