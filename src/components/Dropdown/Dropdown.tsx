@@ -1,17 +1,8 @@
-import { useRef, useState, FocusEvent } from 'react';
+import { useRef, useState } from 'react';
 import useClickOutside from '../../hooks/useClickOutside';
+import { DropdownProps, Selection } from './Dropdown.types';
+
 import './Dropdown.css';
-
-export type Selection = {
-  value: string;
-  label: string;
-};
-
-export type DropdownProps = {
-  label: string;
-  options: Selection[];
-  multiSelect?: boolean;
-};
 
 const Dropdown = ({ label, options, multiSelect }: DropdownProps) => {
   const [selected, setSelected] = useState<Selection[]>([]);
