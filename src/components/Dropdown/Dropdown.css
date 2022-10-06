@@ -1,4 +1,26 @@
 .dropdown-wrapper {
-  min-width: 300x;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.label {
+  text-align: left;
+}
+
+.target {
+  min-width: 300px;
+  min-height: 40px;
   border: 1px solid whitesmoke;
+}
+
+.dropdown {
+  border: 1px solid orange;
+  position: absolute;
+  min-width: 300px;
+  top: 70px;
+}
+
+.option {
+  z-index: 5;ew
 }
