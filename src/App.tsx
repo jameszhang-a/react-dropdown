@@ -14,12 +14,7 @@ function App() {
 
   return (
     <div className='App'>
-      <Dropdown
-        label='Example Dropdown'
-        options={exampleData}
-        onSelectedChange={function (selected: string): void {
-          throw new Error('Function not implemented.');
-        }}></Dropdown>
+      <Dropdown label='Example Dropdown' options={exampleData} multiSelect></Dropdown>
     </div>
   );
 }
